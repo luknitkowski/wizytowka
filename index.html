@@ -6,23 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lukasz Nitkowski</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="parent">
         <div id="child">
             <div id="loading-page" style="height:100vh; width: 100vw;background-color: pink; position: absolute;">Loading</div>
             <div id="container">
-                <div class="header">
-                    <div class="progress-container">
+                <div id="header">
+                    <div id="progress-container">
                       <div class="progress-bar" id="myBar"></div>
                     </div>  
                   </div>
                 <div id="welcome-page">
-                    <div>
-                        <div>Hi! My name is Łukasz Nitkowski. I am a frontend developer</div>
-                        <button>check</button>
-                        
-                    </div>
+                    <div id="parallax">
+                        <div class="layer" data-depth="0.6">
+                          <div class="some-space">
+                            <div id="h5">Hi! My name is Łukasz Nitkowski. I am a Frontend Developer.</div>
+                          </div>
+                        </div>
+                        <div class="layer" data-depth="0.3" style="margin-top: 100px;">
+                          <div id="some-more-space"><a onclick="scrollToElement('about-me-page')">&#8595</a></div>
+                        </div>
+                      </div>
                 </div>
                 <div style="height:1000px; background-color: yellow;" id="about-me-page">about</div>
                 <div style="height:1000px; background-color: brown;" id="experience-page">experience</div>

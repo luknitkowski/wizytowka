@@ -6,7 +6,7 @@ const init = () => {
         const container = getEl('container')
         loadingPage.style.display = 'none'
         container.style.display = 'block'
-    }, 0);
+    }, 0); // 3000
 }
 
 window.onload = () => {
@@ -18,9 +18,19 @@ child.onscroll = function() {myFunction()};
 
 const myFunction = () => {
     const child = getEl('child')
-    const winScroll = child.scrollTop || child.scrollTop;
+    const vh = document.documentElement.clientHeight;
+    const childScroll = child.scrollTop || child.scrollTop;
     const height = child.scrollHeight - child.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
+    if(childScroll < vh){
+        getEl("header").style.display = 'none';
+        return
+    }
+    getEl("header").style.display = 'block';
+    const scrolled = (childScroll / height) * 100;
+    getEl("myBar").style.width = scrolled + "%";
 }
 
+const scrollToElement = (id) => {
+    const choosenEl = getEl(id)
+    choosenEl.scrollIntoView({behavior: "smooth"});
+}
