@@ -1,63 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lukasz Nitkowski</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lukasz Nitkowski</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div id="parent">
-        <div id="child">
-            <div id="loading-page" style="height:100vh; width: 100vw;background-color: pink; position: absolute;">Loading</div>
-            <div id="container">
-                <div id="header">
-                    <div id="progress-container">
-                      <div class="progress-bar" id="myBar"></div>
-                    </div>  
-                  </div>
-                <div id="welcome-page" class="basic-background">
-                  <div class="background-welcome"></div>
-                    <div id="parallax">
-                        <div class="layer" data-depth="0.6">
-                          <div class="some-space">
-                            <div id="h5">Hi! My name is Łukasz Nitkowski. I am a self-employed Frontend Developer.</div>
-                          </div>
-                        </div>
-                        <div class="layer" data-depth="0.3" style="margin-top: 100px;">
-                          <div id="some-more-space"><a onclick="scrollToElement('about-me-page')">&#8595</a></div>
-                        </div>
-                      </div>
+  <div id="parent">
+    <div id="child">
+      <div id="loading-page" style="height:100vh; width: 100vw;background-color: pink; position: absolute;">Loading
+      </div>
+      <div id="container">
+        <div id="header">
+          <div id="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+          </div>
+        </div>
+        <div id="welcome-page" class="basic-background">
+          <div class="background-welcome"></div>
+          <div id="parallax">
+            <div class="layer" data-depth="0.6">
+              <div class="some-space">
+                <div id="h5">Hi! My name is Łukasz Nitkowski. I am a self-employed Frontend Developer.</div>
+              </div>
+            </div>
+            <div class="layer" data-depth="0.3" style="margin-top: 100px;">
+              <div id="some-more-space"><a onclick="scrollToElement('about-me-page')">&#8595</a></div>
+            </div>
+          </div>
+        </div>
+        <div  id="about-me-page" class="basic-background">
+          <div class="hero-container">
+            <h2 class="hero glitch layers" data-text="About me"><span>About me</span></h2>
+          </div>
+        </div>
+        <div  id="experience-page" class="basic-background">
+          <div class="background-experience"></div>
+          <div class="hero-container">
+            <h2 class="hero glitch layers" data-text="Experience"><span>Experience</span></h2>
+          </div>
+          <div class="main-info-blocks" id="info-block-experience">
+            <div class="row-block-experience">
+                <div class="left-block-experience">
+                    <h3>Netfusion Łukasz Nitkowski</h3>
+                    <p>In June 2022, I started working as a self-employed worker. Thanks to that I have more flexibility and fulfill more as a programmer.</p>
+                    <p>I make my own private applications, for example games.</p>
+                    <p>I am currently cooperating with Speednet as a frontend developer and  support in a projects.</p>
                 </div>
-                <div style="height:1000px;" id="about-me-page" class="basic-background">
-                  <div class="hero-container">
-                    <h2 class="hero glitch layers" data-text="About me"><span>About me</span></h2>
-                </div>
-                </div>
-                <div style="height:1000px;" id="experience-page" class="basic-background">
-                  <div class="background-experience"></div>
-                  <div class="hero-container">
-                    <h2 class="hero glitch layers" data-text="Experience"><span>Experience</span></h2>
-                </div>
-                </div>
-                <div style="height:1000px;" id="hobbies-page" class="basic-background">
-                  <div class="hero-container">
-                    <h2 class="hero glitch layers" data-text="Hobbies"><span>Hobbies</span></h2>
-                </div>
-                </div>
-                <div style="height:1000px;" id="contact-page" class="basic-background">
-                  <div class="background-contact"></div>
-                  <div class="hero-container">
-                    <h2 class="hero glitch layers" data-text="Contact"><span>Contact</span></h2>
-                </div>
+                <div class="fake-block-experience"></div>
+            </div>
+            <div class="row-block-experience">
+                <div class="fake-block-experience"></div>
+                <div class="right-block-experience">
+                    <h3>PwC</h3>
+                    <p>I worked in the company for over four years. In this time I was just starting to take my first steps in the IT industry and turned from a junior to a mid developer.</p>
+                    <p>I was monitoring the correctness of the UI / UX. I participated in key project discussions. I was running demos.</p>
+                    <p>I was involed in many projects. I have patched bugs, modernized existing applications, but also created new ones.</p>
+                    <p>All projects where connected with AML, FATCA, Transaction monitoring, KYC processes.</p>
+                    <p>I had the opportunity to work on two goal projects where the types of the technologies used was very large, from the old forgotten to the latest solution.</p>
+                    <p>Deffenitly this time I will rememver as a rocket with with a experience and push ma carrier very forward...</p>
+                    <p>First example project: <a href="https://www.youtube.com/watch?v=9svWOvwpEUE" target="_blank">link</a></p>
+                    <p>Second example project: <a href="https://www.youtube.com/watch?v=t3iNiZ44MZU" target="_blank">link</a></p>
                 </div>
             </div>
+            <div class="row-block-experience">
+                <div class="left-block-experience">
+                    <h3>Energy companies</h3>
+                    <p>For one year I had a change to work in a few energy companies as a enginner. Mostly I was focus on renewable energy sector.</p>
+                    <p>My main tasks were to participate in the design of new installations, modernization of old ones, and creating offers for clients.</p>
+                </div>
+                <div class="fake-block-experience"></div>
+            </div>
         </div>
+        </div>
+        <div  id="hobbies-page" class="basic-background">
+          <div class="hero-container">
+            <h2 class="hero glitch layers" data-text="Hobbies"><span>Hobbies</span></h2>
+          </div>
+        </div>
+        <div  id="contact-page" class="basic-background">
+          <div class="background-contact"></div>
+          <div class="hero-container">
+            <h2 class="hero glitch layers" data-text="Contact"><span>Contact</span></h2>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </body>
 <script src="./script.js"></script>
+
 </html>

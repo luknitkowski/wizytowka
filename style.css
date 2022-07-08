@@ -30,7 +30,7 @@ html, body{
 #header {
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 5;
     width: 100%;
     background-color: #f1f1f1;
     display: none;
@@ -57,6 +57,7 @@ html, body{
   .basic-background {
     background: #000020;
     position: relative;
+    padding: 40px;
   }
 
   .background-welcome {
@@ -668,3 +669,85 @@ h2 {
   padding-top: 40px;
   text-align: center;
 }
+
+/* experience */
+
+.main-info-blocks {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around; 
+    height: 80%;
+    color: white;
+  }
+
+  .main-info-blocks a {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  .row-block-experience {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    margin-top: 100px;
+  }
+  
+  .left-block-experience{
+    width: 55%;
+    border-right: 2px solid #EE250C;
+    text-align: right;
+    padding-right: 20px;
+    text-shadow: 0 2px 10px black, 0 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-transform: rotate(-2deg) rotateY(20deg);
+    -moz-transform: rotate(-2deg) rotateY(20deg);
+    -ms-transform: rotate(-2deg) rotateY(20deg);
+    -o-transform: rotate(-2deg) rotateY(20deg);
+    transform: rotate(-2deg) rotateY(20deg);
+    -webkit-transition: 3s cubic-bezier(0.5, 0, 0, 0.99);
+    -moz-transition: 3s cubic-bezier(0.5, 0, 0, 0.99);
+    -o-transition: 3s cubic-bezier(0.5, 0, 0, 0.99);
+    transition: 3s cubic-bezier(0.5, 0, 0, 0.99);
+  }
+  
+  .left-block-experience h3{
+   color:red;
+  }
+  
+  .right-block-experience h3{
+    color:blue;
+   }
+  
+  .right-block-experience{
+    width: 55%;
+    border-left: 2px solid blue;
+    text-align: left;
+    padding-left: 20px;
+    text-shadow: 0 2px 10px black, 0 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-transform: rotate(2deg) rotateY(-20deg);
+    -moz-transform: rotate(2deg) rotateY(-20deg);
+    -ms-transform: rotate(2deg) rotateY(-20deg);
+    -o-transform: rotate(2deg) rotateY(-20deg);
+    transform: rotate(2deg) rotateY(-20deg);
+    -webkit-transition: 3s cubic-bezier(0.5, 0, 0, 0.99);
+    -moz-transition: 3s cubic-bezier(0.5, 0, 0, 0.99);
+    -o-transition: 3s cubic-bezier(0.5, 0, 0, 0.99);
+    transition: 3s cubic-bezier(0.5, 0, 0, 0.99);
+  }
+  
+  .fake-block-experience{
+    width: 45%;
+  }
+
+  @media only screen and (max-width: 400px) {
+
+    .fake-block-experience{
+        display: none;
+      }
+      .right-block-experience{
+        width: auto;
+      }
+      .left-block-experience{
+        width: auto;
+      }
+  
+  }
