@@ -23,6 +23,13 @@ const checkOnScroll = () => {
     const childScroll = child.scrollTop || child.scrollTop;
     const height = child.scrollHeight - child.clientHeight;
 
+    var mybutton = getEl("myBtn");
+    if (childScroll > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+
     const revealsLeft = document.querySelectorAll(".reveal-left");
     const revealsRight = document.querySelectorAll(".reveal-right");
     const revealsUp = document.querySelectorAll(".reveal-up");
@@ -34,8 +41,6 @@ const checkOnScroll = () => {
         const elementVisible = 150;
         if (elementTop < windowHeight - elementVisible) {
           revealsLeft[i].classList.add("active");
-        } else {
-          revealsLeft[i].classList.remove("active");
         }
       }
     }
@@ -46,8 +51,6 @@ const checkOnScroll = () => {
         const elementVisible = 150;
         if (elementTop < windowHeight - elementVisible) {
           revealsRight[i].classList.add("active");
-        } else {
-          revealsRight[i].classList.remove("active");
         }
       }
     }
@@ -58,9 +61,7 @@ const checkOnScroll = () => {
         const elementVisible = 150;
         if (elementTop < windowHeight - elementVisible) {
           revealsUp[i].classList.add("active");
-        } else {
-          revealsUp[i].classList.remove("active");
-        }
+        } 
       }
     }
     if(revealsDown){
@@ -70,9 +71,7 @@ const checkOnScroll = () => {
         const elementVisible = 150;
         if (elementTop < windowHeight - elementVisible) {
           revealsDown[i].classList.add("active");
-        } else {
-          revealsDown[i].classList.remove("active");
-        }
+        } 
       }
     }
 
@@ -449,4 +448,9 @@ const avatarHover = (action) => {
     avatar.style.boxShadow = '0px 0px 41px 15px rgba(185, 10, 208, 1)';
     avatar.style.transform = 'scale(1.0)';
   }
+}
+
+const scrollToTop = () => {
+  const child = getEl('child')
+  child.scrollTo({top: 0, behavior: 'smooth'});
 }
