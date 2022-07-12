@@ -6,6 +6,7 @@ const init = () => {
         const container = getEl('container')
         loadingPage.style.display = 'none'
         container.style.display = 'block'
+        checkOnScroll()
     }, 0); // 3000
 }
 
@@ -14,13 +15,69 @@ window.onload = () => {
 }
 
 const child = getEl('child')
-child.onscroll = function() {myFunction()};
+child.onscroll = function() {checkOnScroll()};
 
-const myFunction = () => {
+const checkOnScroll = () => {
     const child = getEl('child')
     const vh = document.documentElement.clientHeight;
     const childScroll = child.scrollTop || child.scrollTop;
     const height = child.scrollHeight - child.clientHeight;
+
+    const revealsLeft = document.querySelectorAll(".reveal-left");
+    const revealsRight = document.querySelectorAll(".reveal-right");
+    console.log(revealsRight)
+    const revealsUp = document.querySelectorAll(".reveal-up");
+    const revealsDown = document.querySelectorAll(".reveal-down");
+    if(revealsLeft){
+      for (let i = 0; i < revealsLeft.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = revealsLeft[i].getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+          revealsLeft[i].classList.add("active");
+        } else {
+          revealsLeft[i].classList.remove("active");
+        }
+      }
+    }
+    if(revealsRight){
+      for (let i = 0; i < revealsRight.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = revealsRight[i].getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+          revealsRight[i].classList.add("active");
+        } else {
+          revealsRight[i].classList.remove("active");
+        }
+      }
+    }
+    if(revealsUp){
+      for (let i = 0; i < revealsUp.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = revealsUp[i].getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+          revealsUp[i].classList.add("active");
+        } else {
+          revealsUp[i].classList.remove("active");
+        }
+      }
+    }
+    if(revealsDown){
+      for (let i = 0; i < revealsDown.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = revealsDown[i].getBoundingClientRect().top;
+        const elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+          revealsDown[i].classList.add("active");
+        } else {
+          revealsDown[i].classList.remove("active");
+        }
+      }
+    }
+
+    
     if(childScroll < vh){
         getEl("header").style.display = 'none';
         return
@@ -378,3 +435,19 @@ new Cube({
   viewport: viewport,
   element: document.getElementsByClassName('cube')[0]
 });
+
+const avatarHover = (action) => {
+  const avatar = getEl('avatar')
+  const avatarFilter = getEl('avatar-filter')
+
+  if( action === 'over'){
+    avatarFilter.style.opacity = 0;
+    avatar.style.boxShadow = '0px 0px 41px 15px rgba(152, 145, 127, 1)';
+    avatar.style.transform = 'scale(1.1)';
+  }
+  if( action === 'out'){
+    avatarFilter.style.opacity = 0.3;
+    avatar.style.boxShadow = '0px 0px 41px 15px rgba(185, 10, 208, 1)';
+    avatar.style.transform = 'scale(1.0)';
+  }
+}
