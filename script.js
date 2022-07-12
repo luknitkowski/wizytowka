@@ -25,7 +25,6 @@ const checkOnScroll = () => {
 
     const revealsLeft = document.querySelectorAll(".reveal-left");
     const revealsRight = document.querySelectorAll(".reveal-right");
-    console.log(revealsRight)
     const revealsUp = document.querySelectorAll(".reveal-up");
     const revealsDown = document.querySelectorAll(".reveal-down");
     if(revealsLeft){
