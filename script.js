@@ -82,13 +82,6 @@ const checkOnScroll = () => {
     const scrolled = (childScroll / height) * 100;
     getEl("myBar").style.width = scrolled + "%";
 
-  //   if(prevScrollpos < currentScrollPos && childScroll > vh ){
-  //     getEl("header").style.top = "-50px";
-  //     return
-  // }
-  console.log('check')
-  console.log(prevScrollpos)
-  console.log(childScroll)
     if(childScroll < vh ){
         getEl("header").style.top = "-60px";
     } else if(childScroll < prevScrollpos){
@@ -467,4 +460,8 @@ const avatarHover = (action) => {
 const scrollToTop = () => {
   const child = getEl('child')
   child.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+const  openVerticalMenu = () => {
+  console.log('1')
 }
