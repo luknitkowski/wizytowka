@@ -14,7 +14,9 @@ window.onload = () => {
     init();
 }
 
+
 const child = getEl('child')
+let prevScrollpos = child.scrollTop || child.scrollTop;
 child.onscroll = function() {checkOnScroll()};
 
 const checkOnScroll = () => {
@@ -22,6 +24,7 @@ const checkOnScroll = () => {
     const vh = document.documentElement.clientHeight;
     const childScroll = child.scrollTop || child.scrollTop;
     const height = child.scrollHeight - child.clientHeight;
+
 
     var mybutton = getEl("myBtn");
     if (childScroll > 20) {
@@ -75,14 +78,25 @@ const checkOnScroll = () => {
       }
     }
 
-    
-    if(childScroll < vh){
-        getEl("header").style.display = 'none';
-        return
-    }
-    getEl("header").style.display = 'block';
+    getEl("header").style.top = "0";
     const scrolled = (childScroll / height) * 100;
     getEl("myBar").style.width = scrolled + "%";
+
+  //   if(prevScrollpos < currentScrollPos && childScroll > vh ){
+  //     getEl("header").style.top = "-50px";
+  //     return
+  // }
+  console.log('check')
+  console.log(prevScrollpos)
+  console.log(childScroll)
+    if(childScroll < vh ){
+        getEl("header").style.top = "-60px";
+    } else if(childScroll < prevScrollpos){
+      getEl("header").style.top = "-52px";
+    } else{
+      getEl("header").style.top = "0";
+    }
+    prevScrollpos = childScroll
 }
 
 const scrollToElement = (id) => {
