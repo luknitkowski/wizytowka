@@ -441,22 +441,6 @@ new Cube({
   element: document.getElementsByClassName('cube')[0]
 });
 
-const avatarHover = (action) => {
-  const avatar = getEl('avatar')
-  const avatarFilter = getEl('avatar-filter')
-
-  if( action === 'over'){
-    avatarFilter.style.opacity = 0;
-    avatar.style.boxShadow = '0px 0px 41px 15px rgba(152, 145, 127, 1)';
-    avatar.style.transform = 'scale(1.1)';
-  }
-  if( action === 'out'){
-    avatarFilter.style.opacity = 0.3;
-    avatar.style.boxShadow = '0px 0px 41px 15px rgba(185, 10, 208, 1)';
-    avatar.style.transform = 'scale(1.0)';
-  }
-}
-
 const scrollToTop = () => {
   const child = getEl('child')
   child.scrollTo({top: 0, behavior: 'smooth'});
