@@ -961,10 +961,6 @@ p, h3, h4, h5 {
   color: white;
 }
 
-#avatar-container {
-  animation: slideInLeft 0.75s ease both;
-}
-
 #avatar {
   border-radius: 50%;
   width: 200px;
