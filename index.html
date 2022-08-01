@@ -54,12 +54,14 @@
           <div class="hero-container">
             <h2 class="hero glitch layers" data-text="About me"><span>About me</span></h2>
           </div>
-          <div style="display: flex; margin-top: 50px; margin-bottom: 50px;">
+          <div style="display: flex; margin-top: 50px; margin-bottom: 50px; max-width: 2000px; margin:auto;">
             <div style="width: 50%; text-align: center; padding: 40px;">
-              <div id="avatar-container" class="reveal-left">
-                <img src="./images/avatar.jfif" id="avatar" />
+              <div id="avatar-block">
+                <div id="avatar-container" >
+                  <img src="./images/avatar.jfif" id="avatar" />
+                </div>
               </div>
-              <h3>Hi! A few words about me</h3>
+              <h2>Hi! A few words about me</h2>
               <p>
                 My name is Łukasz. I am a Front-end developer using technologies which are focus around javascript
                 programming language.
@@ -67,7 +69,7 @@
                 specialisation: conversion of energy.
                 For now I am focus on backend part learning to become full-stack developer.
               </p>
-              <h3>Sample technologies that I used:</h3>
+              <h2>Sample technologies that I used:</h2>
               <p>HTML, CSS, SCSS, SASS, JavaScript, NodeJS, Express, TypeScript, 
                 React Native, Angular, Node.js, material-UI, Devexpress, lodash, 
                 Date-fns, Redux, React-Query, Jest, Git, TFS, SharePoint, GitHub, GitBucket, GitLab
@@ -166,7 +168,7 @@
               </div>
             </div>
           </div>
-          <div class="thema-container">
+          <div id="thema-container">
             <div class="thema-block box">
               <a href="https://en.wikipedia.org/wiki/Frontend_and_backend#Front-end_focused" target="_blank"></a>
               <img src="./images/html.png" id="about-image" />
@@ -258,31 +260,35 @@
           <div class="hero-container">
             <h2 class="hero glitch layers" data-text="Hobbies"><span>Hobbies</span></h2>
           </div>
-          <p>lerum poleum lerum poleum lerum poleum lerum poleum lerum poleum lerum poleum lerum poleum lerum poleum
-            lerum poleum lerum poleum lerum poleum lerum poleum lerum poleum lerum poleum lerum poleum lerum poleum </p>
-          <div id="wrapper">
-            <div class="viewport">
-              <div class="cube">
-                <div class="side">
-                  <div class="cube-image">Medicine</div>
-                </div>
-                <div class="side">
-                  <div class="cube-image" id="cube-trololo"><img draggable="false" src="./images/trololo.png" /></div>
-                </div>
-                <div class="side">
-                  <div class="cube-image">Physics</div>
-                </div>
-                <div class="side">
-                  <div class="cube-image">Energy</div>
-                </div>
-                <div class="side">
-                  <div class="cube-image">Economy</div>
-                </div>
-                <div class="side">
-                  <div class="cube-image active">Aviation</div>
+          <div style="max-width: 2000px; margin: auto;">
+            <h3 style="text-align: center; margin-top: 100px;">I have many passions that create my personality. Each of them is a pillar of my knowledge and determines the way I live and work.
+              Please move the cube to see what passions exactly are concerned.
+            </h3>
+            <div id="wrapper">
+              <div class="viewport">
+                <div class="cube">
+                  <div class="side">
+                    <div class="cube-image" data-hobbie="medicine">Medicine</div>
+                  </div>
+                  <div class="side">
+                    <div class="cube-image" id="cube-trololo" data-hobbie="trololo"><img draggable="false" src="./images/trololo.png" /></div>
+                  </div>
+                  <div class="side">
+                    <div class="cube-image" data-hobbie="physics">Physics</div>
+                  </div>
+                  <div class="side">
+                    <div class="cube-image" data-hobbie="energy">Energy</div>
+                  </div>
+                  <div class="side">
+                    <div class="cube-image" data-hobbie="economy">Economy</div>
+                  </div>
+                  <div class="side">
+                    <div class="cube-image active" data-hobbie="aviation">Aviation</div>
+                  </div>
                 </div>
               </div>
             </div>
+            <p id="hobbies-text" style="margin-bottom: 100px; text-align: center;">aviation</p>
           </div>
         </div>
         <div id="contact-page" class="basic-background">

@@ -85,7 +85,7 @@ const checkOnScroll = () => {
     if(childScroll < vh ){
         getEl("header").style.top = "-60px";
     } else if(childScroll < prevScrollpos){
-      getEl("header").style.top = "-52px";
+      getEl("header").style.top = "-53px";
     } else{
       getEl("header").style.top = "0";
     }
@@ -389,6 +389,32 @@ var viewport = new Viewport({
   touchSensivity: 1.5
 });
 
+const changeActiveHobbieText = (activeHobbie) => {
+  let textHobbie = getEl('hobbies-text')
+  switch (activeHobbie) {
+    case 'medicine':
+      textHobbie.innerText = 'Health is the most important thing. I try to take care of my health through learning basic level of in the field of Western and Eastern medicine, in particular natural medicine. As a result, the quality of my work and life is higher.';
+      break;
+    case 'aviation':
+      textHobbie.innerText = 'From childhood, I dreamed of flying by plane. In part, I was able to make my dream come true. Even though I am a programmer, the propeller in my head is still spinning.';
+      break;
+    case 'economy':
+      textHobbie.innerText = 'Money does not bring happiness, but it can buy happiness. I believe that in life it is worth investing in yourself and in business, but you have to do it with your head on your neck. That is why I try to supplement my knowledge of economics on an ongoing basis.';
+      break;
+    case 'energy':
+      textHobbie.innerText = 'The energy industry interests me due to the fact that I studied physics focusing on this industry, but also in my opinion it is the most important element of the modern world ... It is the foundation of our civilization.';
+      break;
+    case 'physics':
+      textHobbie.innerText = 'Maybe I am no longer study physics and I am not a crazy scientist working in a secret laboratory. However I still try to be up to date with the latest discoveries in this field.';
+      break;
+    case 'trololo':
+      textHobbie.innerText = 'Sense of humor, because you have to be positive in life!';
+      break;
+    default:
+      break;
+  }
+}
+
 function Cube(data) {
   var self = this;
 
@@ -424,7 +450,6 @@ Cube.prototype.upsideDown = function(obj) {
   while(i > 0 && --i) {
     this.sides[i].getElementsByClassName('cube-image')[0].style[userPrefix.js + 'Transform'] = 'rotate(' + deg + ')';
   }
-
 }
 Cube.prototype.sideChange = function() {
 
@@ -433,7 +458,8 @@ Cube.prototype.sideChange = function() {
   }
 
   this.sides[this.viewport.currentSide - 1].getElementsByClassName('cube-image')[0].className = 'cube-image active';
-
+  const activeHobbie =  this.sides[this.viewport.currentSide - 1].getElementsByClassName('cube-image')[0].dataset.hobbie
+  changeActiveHobbieText(activeHobbie)
 }
 
 new Cube({
