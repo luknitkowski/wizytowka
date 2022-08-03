@@ -12,6 +12,7 @@ const init = () => {
 
 window.onload = () => {
     init();
+    addFooterTekst()
 }
 
 
@@ -474,4 +475,9 @@ const scrollToTop = () => {
 
 const  openVerticalMenu = () => {
   console.log('1')
+}
+
+const addFooterTekst = () => {
+  let footerTekst = getEl('footer-tekst')
+  footerTekst.innerText = `@${new Date().getFullYear()} designed by Netfusion Łukasz Nitkowski`
 }
