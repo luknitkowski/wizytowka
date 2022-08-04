@@ -481,3 +481,7 @@ const addFooterTekst = () => {
   let footerTekst = getEl('footer-tekst')
   footerTekst.innerText = `@${new Date().getFullYear()} designed by Netfusion Łukasz Nitkowski`
 }
+
+document.querySelector( "#retrobg-sun" ).onclick = () => {
+  document.querySelector( "#retrobg" ).classList.toggle( "retrobg-shutdown" );
+};
