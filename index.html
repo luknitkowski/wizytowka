@@ -15,7 +15,15 @@
 <body>
   <div id="parent">
     <div id="child">
-      <div id="loading-page" style="height:100vh; width: 100vw;background-color: pink; position: absolute;">Loading
+      <div id="loading-page" style="height:100vh; width: 100vw;background-color: #000020; 
+      position: absolute; display: flex; justify-content: center; align-items: center;">
+        <a id="logo-container" href="#">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <h1 id="n-logo">N</h1>
+        </a>
       </div>
       <div id="container">
         <button onclick="scrollToTop()" id="myBtn">&#8593</button>
@@ -44,7 +52,7 @@
                 <p id="h5">Hi! My name is Łukasz Nitkowski. I am a self-employed Frontend Developer.</p>
               </div>
             </div>
-            <div class="layer" data-depth="0.3" style="margin-top: 100px;">
+            <div class="layer" data-depth="0.3" id="button-layer">
               <div onclick="scrollToElement('about-me-page')" id="some-more-space" class="button">&#8595</div>
             </div>
           </div> 
@@ -199,8 +207,8 @@
           <div class="hero-container">
             <h2 class="hero glitch layers" data-text="About me"><span>About me</span></h2>
           </div>
-          <div style="display: flex; margin-top: 50px; margin-bottom: 50px; max-width: 2000px; margin:auto;">
-            <div style="width: 50%; text-align: center; padding: 40px;">
+          <div id="about-me-tech-skills">
+            <div id ="about-me-tech-skills-first-part">
               <div id="avatar-block">
                 <div id="avatar-container" >
                   <img src="./images/avatar.jfif" id="avatar" />
@@ -222,93 +230,106 @@
                  SEO, RWD, CI/CD, Styled components, REST API, UUID, storybook, 
                  js-cookie, json-logic, formik, i18n and many others... </p>
             </div>
-            <div class="skills-container">
-              <div class="row-skill">
-                <div class="skill-type">
-                  <p>HTML</p>
+            <div id="skills-container">
+              <div>
+                <div class="row-skill">
+                  <div class="skill-type">
+                    <p>HTML</p>
+                  </div>
+                  <div class="fill-skill">
+                    <div id="skill-html"></div>
+                  </div>
+                  <div class="percentage-skill">
+                    <p>95%</p>
+                  </div>
                 </div>
-                <div class="fill-skill">
-                  <div id="skill-html"></div>
+                <div class="row-skill">
+                  <div class="skill-type">
+                    <p>JavaScript</p>
+                  </div>
+                  <div class="fill-skill">
+                    <div id="skill-js"></div>
+                  </div>
+                  <div class="percentage-skill">
+                    <p>93%</p>
+                  </div>
                 </div>
-                <div class="percentage-skill">
-                  <p>95%</p>
+                <div class="row-skill">
+                  <div class="skill-type">
+                    <p>Typescript</p>
+                  </div>
+                  <div class="fill-skill">
+                    <div id="skill-ts"></div>
+                  </div>
+                  <div class="percentage-skill">
+                    <p>91%</p>
+                  </div>
                 </div>
-              </div>
-              <div class="row-skill">
-                <div class="skill-type">
-                  <p>JavaScript</p>
+                <div class="row-skill">
+                  <div class="skill-type">
+                    <p class="smaller-font">CSS</p>
+                  </div>
+                  <div class="fill-skill">
+                    <div id="skill-style"></div>
+                  </div>
+                  <div class="percentage-skill">
+                    <p>90%</p>
+                  </div>
                 </div>
-                <div class="fill-skill">
-                  <div id="skill-js"></div>
+                <div class="row-skill">
+                  <div class="skill-type">
+                    <p >React</p>
+                  </div>
+                  <div class="fill-skill">
+                    <div id="skill-react"></div>
+                  </div>
+                  <div class="percentage-skill">
+                    <p>90%</p>
+                  </div>
                 </div>
-                <div class="percentage-skill">
-                  <p>93%</p>
+                <div class="row-skill">
+                  <div class="skill-type">
+                    <p >React Native</p>
+                  </div>
+                  <div class="fill-skill">
+                    <div id="skill-react-native"></div>
+                  </div>
+                  <div class="percentage-skill">
+                    <p>80%</p>
+                  </div>
                 </div>
-              </div>
-              <div class="row-skill">
-                <div class="skill-type">
-                  <p>Typescript</p>
+                <div class="row-skill">
+                  <div class="skill-type">
+                    <p >Angular</p>
+                  </div>
+                  <div class="fill-skill">
+                    <div id="skill-angular"></div>
+                  </div>
+                  <div class="percentage-skill">
+                    <p>70%</p>
+                  </div>
                 </div>
-                <div class="fill-skill">
-                  <div id="skill-ts"></div>
+                <div class="row-skill">
+                  <div class="skill-type">
+                    <p >AngularJS</p>
+                  </div>
+                  <div class="fill-skill">
+                    <div id="skill-angularjs"></div>
+                  </div>
+                  <div class="percentage-skill">
+                    <p>70%</p>
+                  </div>
                 </div>
-                <div class="percentage-skill">
-                  <p>91%</p>
-                </div>
-              </div>
-              <div class="row-skill">
-                <div class="skill-type">
-                  <p class="smaller-font">CSS/SCSS/SASS</p>
-                </div>
-                <div class="fill-skill">
-                  <div id="skill-style"></div>
-                </div>
-                <div class="percentage-skill">
-                  <p>90%</p>
-                </div>
-              </div>
-              <div class="row-skill">
-                <div class="skill-type">
-                  <p >React</p>
-                </div>
-                <div class="fill-skill">
-                  <div id="skill-react"></div>
-                </div>
-                <div class="percentage-skill">
-                  <p>90%</p>
-                </div>
-              </div>
-              <div class="row-skill">
-                <div class="skill-type">
-                  <p >React Native</p>
-                </div>
-                <div class="fill-skill">
-                  <div id="skill-react-native"></div>
-                </div>
-                <div class="percentage-skill">
-                  <p>80%</p>
-                </div>
-              </div>
-              <div class="row-skill">
-                <div class="skill-type">
-                  <p >Angular</p>
-                </div>
-                <div class="fill-skill">
-                  <div id="skill-angular"></div>
-                </div>
-                <div class="percentage-skill">
-                  <p>70%</p>
-                </div>
-              </div>
-              <div class="row-skill">
-                <div class="skill-type">
-                  <p >AngularJS</p>
-                </div>
-                <div class="fill-skill">
-                  <div id="skill-angularjs"></div>
-                </div>
-                <div class="percentage-skill">
-                  <p>70%</p>
+                <div class="row-skill">
+                  <div class="skill-type">
+                    <p >NodeJS</p>
+                  </div>
+                  <div class="fill-skill">
+                    <div id="skill-nodejs"></div>
+                  </div>
+                  <div class="percentage-skill">
+                    <p>40%</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -408,8 +429,8 @@
           <h3 style="text-align: center; max-width: 2000px; margin: auto;margin-top: 100px;">I have many passions that create my personality. Each of them is a pillar of my knowledge and determines the way I live and work.
             Please move the cube to see what passions exactly are concerned.
           </h3>
-          <div style="max-width: 2000px; margin: auto; display: flex;">
-            <div style="width: 50%; display:flex;justify-content: center; align-items: center;">
+          <div id="cube-block">
+            <div>
               <div id="wrapper">
                 <div class="viewport">
                   <div class="cube">
@@ -435,7 +456,7 @@
                 </div>
               </div>
             </div>
-            <div style="width: 50%; display:flex;justify-content: center; align-items: center;">
+            <div>
               <p id="hobbies-text" style="margin-bottom: 100px; text-align: center;">
                 From childhood, I dreamed of flying by plane. In part, I was able to make my dream come true. Even though I am a programmer, the propeller in my head is still spinning.</p>
             </div>
@@ -450,13 +471,6 @@
             <h3 styl="text-align: center;">
               Although I am not looking for new projects at the moment, feel free to contact me via my profile on linkedin. I am not interested in working in the banking and government sectors:
             </h3>
-            <a id="contact-linkedin" href="#">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <p style="margin: 0;">My Linkedin</p>
-            </a>
           </div>
         </div>
         <diV id="footer">

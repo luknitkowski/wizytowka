@@ -1,13 +1,22 @@
 const getEl = (id) => document.getElementById(id);
 
 const init = () => {
+    const logoContainer = getEl('logo-container') 
+    const nLogo = getEl('n-logo') 
+
+    logoContainer.style.display = 'block';
+    nLogo.style.display = 'block';
+    document.getElementById('logo-container').focus();    
+
+
     setTimeout(() => {
         const loadingPage = getEl('loading-page')
         const container = getEl('container')
-        loadingPage.style.display = 'none'
-        container.style.display = 'block'
-        checkOnScroll()
-    }, 0); // 3000
+
+        // loadingPage.style.display = 'none'
+        // container.style.display = 'block'
+        // checkOnScroll()
+    }, 3000); // 3000
 }
 
 window.onload = () => {

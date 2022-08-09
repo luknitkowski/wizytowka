@@ -1175,11 +1175,6 @@ p, h3, h4, h5, h2 {
   font-size: 12px;
 }
 
-.skills-container{
-  width:50%;
-  padding-top: 50px;
-}
-
 #skill-html{
   width: 95%;
 }
@@ -1209,6 +1204,10 @@ p, h3, h4, h5, h2 {
 
 #skill-angularjs{
   width: 70%;
+}
+
+#skill-nodejs{
+  width: 40%;
 }
 
 #thema-container {
@@ -1308,7 +1307,13 @@ p, h3, h4, h5, h2 {
 
 /**/
 
-#contact-linkedin {
+#n-logo {
+  margin: 0;
+  color: red; 
+  display: none;
+}
+
+#logo-container {
   position: relative;
   display: inline-block;
   padding: 15px 30px;
@@ -1319,9 +1324,10 @@ p, h3, h4, h5, h2 {
   font-size: 24px;
   overflow: hidden;
   transition: 0.2s;
+  display: none;
 }
 
-#contact-linkedin:hover {
+#logo-container:hover {
   color: white;
   box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
   transition-delay: 1s;
@@ -1329,12 +1335,12 @@ p, h3, h4, h5, h2 {
 }
 
 
-#contact-linkedin span {
+#logo-container span {
   position: absolute;
   display: block;
 }
 
-#contact-linkedin span:nth-child(1) {
+#logo-container span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -1342,7 +1348,7 @@ p, h3, h4, h5, h2 {
   background: linear-gradient(90deg, transparent, red);
 }
 
-#contact-linkedin span:nth-child(2) {
+#logo-container span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -1350,7 +1356,7 @@ p, h3, h4, h5, h2 {
   background: linear-gradient(180deg, transparent, blue);
 }
 
-#contact-linkedin span:nth-child(3) {
+#logo-container span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -1358,7 +1364,7 @@ p, h3, h4, h5, h2 {
   background: linear-gradient(270deg, transparent, blue);
 }
 
-#contact-linkedin span:nth-child(4) {
+#logo-container span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -1367,24 +1373,24 @@ p, h3, h4, h5, h2 {
 }
 
 
-#contact-linkedin:hover span:nth-child(1) {
+#logo-container:hover span:nth-child(1) {
   left: 100%;
   transition: 1s;
 }
 
-#contact-linkedin:hover span:nth-child(3) {
+#logo-container:hover span:nth-child(3) {
   right: 100%;
   transition: 1s;
   transition-delay: 0.5s;
 }
 
-a#contact-linkedin:hover span:nth-child(2) {
+a#logo-container:hover span:nth-child(2) {
   top: 100%;
   transition: 1s;
   transition-delay: 0.25s;
 }
 
-#contact-linkedin:hover span:nth-child(4) {
+#logo-container:hover span:nth-child(4) {
   bottom: 100%;
   transition: 1s;
   transition-delay: 0.75s;
@@ -1395,7 +1401,7 @@ a#contact-linkedin:hover span:nth-child(2) {
 .button {
   position: absolute;
     top: 60%;
-    left: 50%;
+    left: 47%;
   height: 100px !important;
   width: 100px !important;
   display: flex;
@@ -1632,4 +1638,95 @@ a#contact-linkedin:hover span:nth-child(2) {
 
 .retrobg-vline + .retrobg-vline {
   margin-left: 48px;
+}
+#button-layer {
+  margin-top: 100px;
+}
+
+#about-me-tech-skills {
+  display: flex;
+  margin-top: 50px; 
+  margin-bottom: 50px; 
+  max-width: 2000px; 
+  margin:auto;
+}
+
+#about-me-tech-skills-first-part {
+  width: 50%; 
+  text-align: center; 
+  padding: 40px;
+}
+
+#skills-container{
+  width:50%;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#skills-container > div:first-child {
+  width: 100%;
+}
+
+#cube-block {
+  max-width: 2000px; 
+  margin: auto; 
+  display: flex;
+}
+
+#cube-block > div:first-child, #cube-block > div:last-child {
+  width: 50%; display:flex;justify-content: center; align-items: center;
+}
+
+@media screen and (max-width: 1000px){
+  #about-me-tech-skills {
+    display: block;
+  }
+
+  #about-me-tech-skills-first-part {
+    width: 100%; 
+  }
+
+  #skills-container{
+    width:100%;
+  }
+}
+
+@media screen and (max-width: 600px), 
+       screen and (max-height: 600px) {
+        #h5{
+          font-size: 15px;
+        }
+        #some-more-space{
+          height: 50px !important;
+          width: 50px !important;
+          border: 3px solid white;
+        }
+        #button-layer {
+          margin-top: 50px;
+        }
+}
+
+@media screen and (max-width: 600px){
+  .fake-block-experience {
+    display: none;
+  }
+
+  .left-block-experience, .right-block-experience{
+    width: 100%;
+  }
+
+  #cube-block {
+    display: block;
+  }
+
+  #cube-block > div{
+    display: block;
+  }
+
+  #cube-block > div:first-child, #cube-block > div:last-child {
+    width: 100%;
+  }
+
 }
