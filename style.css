@@ -1307,10 +1307,34 @@ p, h3, h4, h5, h2 {
 
 /**/
 
+@keyframes opacity01 { 
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity10 { 
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.loading-page-hide{
+  animation: opacity10 1s;
+}
+
 #n-logo {
   margin: 0;
   color: red; 
-  display: none;
+  animation: opacity01 3s;
 }
 
 #logo-container {
@@ -1324,7 +1348,6 @@ p, h3, h4, h5, h2 {
   font-size: 24px;
   overflow: hidden;
   transition: 0.2s;
-  display: none;
 }
 
 #logo-container:hover {
