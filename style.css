@@ -1331,6 +1331,10 @@ p, h3, h4, h5, h2 {
   animation: opacity10 1s;
 }
 
+#footer-tekst {
+  text-align: center;
+}
+
 #n-logo {
   margin: 0;
   color: red; 
@@ -1349,14 +1353,6 @@ p, h3, h4, h5, h2 {
   overflow: hidden;
   transition: 0.2s;
 }
-
-.logo-container-active {
-  color: white;
-  box-shadow: 0 0 10px blue, 0 0 40px blue, 0 0 80px blue;
-  transition-delay: 1s;
-  background: blue ;
-}
-
 
 #logo-container span {
   position: absolute;
