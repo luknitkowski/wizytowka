@@ -2,24 +2,36 @@ const getEl = (id) => document.getElementById(id);
 
 const init = () => {
   const loadingPage = getEl('loading-page')
+  const logoContainer = getEl('logo-container')
+  
+  logoContainer.children[0].classList.add('first-child')
+  logoContainer.children[1].classList.add('second-child')
+  logoContainer.children[2].classList.add('third-child')
+  logoContainer.children[3].classList.add('fourth-child')
+
     //const logoContainer = getEl('logo-container') 
     //const nLogo = getEl('n-logo') 
 
     // logoContainer.style.display = 'block';
     // nLogo.style.display = 'block'; 
 
+    setTimeout(() => {
+      logoContainer.classList.add('logo-container-active')
+
+  }, 1500); // 3000
+
 
     setTimeout(() => {
         loadingPage.classList.add("loading-page-hide");
         const container = getEl('container')
-        // container.style.display = 'block'
-        //  checkOnScroll()
-         //loadingPage.style.display = 'none'
+        container.style.display = 'block'
+         checkOnScroll()
+         
     }, 3000); // 3000
 
-  //   setTimeout(() => {
-  //     loadingPage.style.display = 'none'
-  // }, 3500); // 3000
+    setTimeout(() => {
+      loadingPage.style.display = 'none'
+  }, 3500); // 3000
 }
 
 window.onload = () => {

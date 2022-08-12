@@ -1081,13 +1081,13 @@ p, h3, h4, h5, h2 {
 
 .reveal-up {
   position: relative;
-  transform: translateX(-150px);
+  transform: translateY(-150px);
   opacity: 0;
   transition: 2s all ease;
 }
 
 .reveal-up.active {
-  transform: translateX(0);
+  transform: translateY(0);
   opacity: 1;
 }
 
@@ -1350,11 +1350,11 @@ p, h3, h4, h5, h2 {
   transition: 0.2s;
 }
 
-#logo-container:hover {
+.logo-container-active {
   color: white;
-  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  box-shadow: 0 0 10px blue, 0 0 40px blue, 0 0 80px blue;
   transition-delay: 1s;
-  background: #2196f3;
+  background: blue ;
 }
 
 
@@ -1396,27 +1396,27 @@ p, h3, h4, h5, h2 {
 }
 
 
-#logo-container:hover span:nth-child(1) {
-  left: 100%;
-  transition: 1s;
+.first-child {
+  left: 100% !important;
+  transition: 1s !important;
 }
 
-#logo-container:hover span:nth-child(3) {
-  right: 100%;
-  transition: 1s;
-  transition-delay: 0.5s;
+.third-child {
+  right: 100% !important;
+  transition: 1s !important;
+  transition-delay: 0.5s !important;
 }
 
-a#logo-container:hover span:nth-child(2) {
-  top: 100%;
-  transition: 1s;
-  transition-delay: 0.25s;
+.second-child {
+  top: 100% !important;
+  transition: 1s !important;
+  transition-delay: 0.25s !important;
 }
 
-#logo-container:hover span:nth-child(4) {
-  bottom: 100%;
-  transition: 1s;
-  transition-delay: 0.75s;
+.fourth-child {
+  bottom: 100% !important;
+  transition: 1s !important;
+  transition-delay: 0.75s !important;
 }
 
 /**/
