@@ -34,21 +34,50 @@ window.onload = () => {
 
 const child = getEl('child')
 let prevScrollpos = child.scrollTop || child.scrollTop;
-child.onscroll = function() {checkOnScroll()};
+
+function debounce(func, timeout = 1000){
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => { func.apply(this, args); }, timeout);
+  };
+}
+
+child.onscroll = function() {
+  checkOnScroll()
+};
+
+let timeFixed;
 
 const checkOnScroll = () => {
-    const child = getEl('child')
+
+  const child = getEl('child')
     const vh = document.documentElement.clientHeight;
     const childScroll = child.scrollTop || child.scrollTop;
     const height = child.scrollHeight - child.clientHeight;
 
-
     var mybutton = getEl("myBtn");
-    if (childScroll > 20) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
+    var inButton = getEl("linkedin-button");
+    console.log('childScroll')
+    if(timeFixed){
+      clearTimeout(timeFixed)
     }
+      if (childScroll > 20) {
+        console.log('1')
+        mybutton.style.display = "block";
+        inButton.style.display = "block";
+        mybutton.style.animation = "opacity010 1s forwards";
+        inButton.style.animation = "opacity010 1s forwards";
+      } else {
+        console.log('2')
+        mybutton.style.animation = "opacity101 1s forwards";
+        inButton.style.animation = "opacity101 1s forwards";
+        timeFixed = setTimeout(() => {
+          mybutton.style.display = "none";
+          inButton.style.display = "none";
+        }, 1000);
+      }
+    
 
     const revealsLeft = document.querySelectorAll(".reveal-left");
     const revealsRight = document.querySelectorAll(".reveal-right");
