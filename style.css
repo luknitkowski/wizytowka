@@ -1,26 +1,32 @@
 body {
   font-family: 'Orbitron', sans-serif;
   margin: 0;
-}
-
-html,
-body {
-  overflow: hidden;
-}
-
-#parent {
-  overflow: hidden;
-}
-
-#child {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: -15px;
-  overflow: auto;
+  width: 100vw;
   overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000020;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg, rgba(0, 0, 255, 1) 0%, rgba(253, 29, 29, 1) 77%, rgba(255, 0, 0, 1) 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+
+
+
+
+
 
 #container {
   display: none;
@@ -70,7 +76,13 @@ body {
   background: #000020;
   position: relative;
   padding: 40px;
-  min-height: 110vh;
+}
+
+.basic-background2 {
+  background: #000020;
+  position: relative;
+  padding: 40px;
+  min-height: 100vh;
 }
 
 .background-welcome {
@@ -1432,7 +1444,7 @@ p, h3, h4, h5, h2 {
   background: linear-gradient(270deg, transparent, blue);
 }
 
-#logo-container span:nth-child(4) {
+#logo-basic-background span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;

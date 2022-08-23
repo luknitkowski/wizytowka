@@ -32,10 +32,9 @@ window.onload = () => {
 }
 
 
-const child = getEl('child')
-let prevScrollpos = child.scrollTop || child.scrollTop;
+let prevScrollpos = window.scrollY
 
-child.onscroll = function() {
+window.onscroll  = function() {
   checkOnScroll()
 };
 
@@ -43,11 +42,12 @@ let timeFixed;
 
 const checkOnScroll = () => {
 
-  const child = getEl('child')
     const vh = document.documentElement.clientHeight;
-    const childScroll = child.scrollTop || child.scrollTop;
-    const height = child.scrollHeight - child.clientHeight;
-
+    const childScroll = window.scrollY
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    console.log('checkOnScroll')
+    console.log(childScroll)
+    console.log(height)
     var mybutton = getEl("myBtn");
     if(timeFixed){
       clearTimeout(timeFixed)
@@ -498,7 +498,7 @@ new Cube({
 });
 
 const scrollToTop = () => {
-  const child = getEl('child')
+  const child = window
   child.scrollTo({top: 0, behavior: 'smooth'});
 }
 
