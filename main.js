@@ -3,27 +3,32 @@ const getEl = (id) => document.getElementById(id);
 const init = () => {
   const loadingPage = getEl('loading-page')
   const logoContainer = getEl('logo-container')
-  
+  const nLogo = getEl('n-logo-start');
+
+  nLogo.style.animation = "opacity010 1s forwards";
+  logoContainer.style.transition= '3s'
+
+  setTimeout(() => {
   logoContainer.children[0].classList.add('first-child')
   logoContainer.children[1].classList.add('second-child')
   logoContainer.children[2].classList.add('third-child')
   logoContainer.children[3].classList.add('fourth-child')
-  logoContainer.style.transition= '3s'
+}, 1); ///1000
 
   setTimeout(() => {
     logoContainer.style.transform= 'scale(5)'
-}, 1500); ///1500
+}, 1); ///2000
 
     setTimeout(() => {
         loadingPage.classList.add("loading-page-hide");
         const container = getEl('container')
         container.style.display = 'block'
          checkOnScroll()
-    }, 3000);///3000
+    }, 1);///3000
 
     setTimeout(() => {
       loadingPage.style.display = 'none'
-  }, 3500); ///3500
+  }, 1); ///3500
 }
 
 window.onload = () => {
