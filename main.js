@@ -292,9 +292,9 @@ function Viewport(data) {
   });
 
   bindEvent(document, 'touchmove', function(e) {
-    if(e.preventDefault) { 
-      e.preventDefault();
-    }
+   
+      
+    
 
     if(e.touches.length == 1) {
 
