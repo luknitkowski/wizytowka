@@ -1396,10 +1396,9 @@ p, h3, h4, h5, h2 {
   text-align: center;
 }
 
-#n-logo {
-  margin: 0;
-  color: red; 
-  animation: opacity01 3s;
+#n-logo-start {
+ width: 10vw;
+ height: 10vw;
 }
 
 #logo-container {
