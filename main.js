@@ -443,7 +443,7 @@ const changeActiveHobbieText = (activeHobbie) => {
       textHobbie.innerText = 'Maybe I am no longer study physics and I am not a crazy scientist working in a secret laboratory. However I still try to be up to date with the latest discoveries in this field.';
       break;
     case 'trololo':
-      textHobbie.innerText = 'Sense of humor, because you have to be positive in life!';
+      textHobbie.innerText = 'The fantasy world allows the imagination to develop incredibly.';
       break;
     default:
       break;
