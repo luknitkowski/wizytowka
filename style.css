@@ -1829,3 +1829,13 @@ p, h3, h4, h5, h2 {
 .active-option {
   color: blue;
 }
+
+.to-right{
+  text-align: right;
+}
+
+#vertical-navbar{
+  display: none;
+  padding: 15px;
+  background: linear-gradient(90deg, rgba(0, 0, 255, 1) 0%, rgba(253, 29, 29, 1) 77%, rgba(255, 0, 0, 1) 100%);
+}

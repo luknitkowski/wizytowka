@@ -42,15 +42,23 @@
           top: 13px;"/>
           <p>etfusion</p>
         </div>
-        <div style="width: 100%; display:flex;justify-content: flex-end; align-items: center;">
+        <div id="horizontal-navbar" style="width: 100%; display:flex;justify-content: flex-end; align-items: center;">
           <p class="menu-option margin-left-header-options home-option active-option"  onclick="scrollToTop()" >Home</p>
           <p class="menu-option margin-left-header-options about-me-page-option"  onclick="scrollToElement('about-me-page')" >About</p>
           <p class="menu-option margin-left-header-options experience-page-option"  onclick="scrollToElement('experience-page')" >Experience</p>
           <p class="menu-option margin-left-header-options projects-page-option"  onclick="scrollToElement('projects-page')" >Projects</p>
           <p class="menu-option margin-left-header-options hobbies-page-option"  onclick="scrollToElement('hobbies-page')" >Hobbies</p>
           <p class="menu-option margin-left-header-options contact-page-option"  onclick="scrollToElement('contact-page')" >Contact</p>
-          <img id="menu-icon" src="./images/menu-icon.svg" onclick="openVerticalMenu"/>
+          <img id="menu-icon" src="./images/menu-icon.svg" onclick="openVerticalMenu()"/>
         </div>
+      </div>
+      <div id="vertical-navbar">
+        <p class="to-right vertical-menu-option home-option active-option" style="margin-top: 0;"  onclick="scrollToElement('home-page', true)" >Home</p>
+        <p class="to-right vertical-menu-option about-me-page-option"  onclick="scrollToElement('about-me-page', true)" >About</p>
+        <p class="to-right vertical-menu-option experience-page-option"  onclick="scrollToElement('experience-page', true)" >Experience</p>
+        <p class="to-right vertical-menu-option projects-page-option"  onclick="scrollToElement('projects-page', true)" >Projects</p>
+        <p class="to-right vertical-menu-option hobbies-page-option"  onclick="scrollToElement('hobbies-page', true)" >Hobbies</p>
+        <p class="to-right vertical-menu-option contact-page-option"  style="margin-bottom: 0;" onclick="scrollToElement('contact-page', true)" >Contact</p>
       </div>
       <div id="progress-container">
         <div class="progress-bar" id="myBar"></div>
@@ -655,7 +663,7 @@
         </div>
       </div>
     </div>
-    <div id="contact-page" class="basic-background2" style="min-height:800px;">
+    <div id="contact-page" class="basic-background2" style="min-height:1000px;">
       <div class="hero-container reveal-up">
         <h2 class="hero glitch layers" data-text="Contact"><span>Contact</span></h2>
       </div>

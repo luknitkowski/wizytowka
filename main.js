@@ -125,38 +125,32 @@ const checkOnScroll = () => {
     getEl("header").style.top = "0";
   }
   prevScrollpos = childScroll
-
-  /// positons of menus
   const home = getEl('welcome-page').getBoundingClientRect().y
   const about = getEl('about-me-page').getBoundingClientRect().y
   const exp = getEl('experience-page').getBoundingClientRect().y
   const projects = getEl('projects-page').getBoundingClientRect().y
   const hobbies = getEl('hobbies-page').getBoundingClientRect().y
   const contact = getEl('contact-page').getBoundingClientRect().y
-  const listMenuPositions = [home, about, exp, projects, hobbies, contact]
-  for (var x = 0; x < listMenuPositions.length; x++) {
-    if (listMenuPositions[x + 1] > 0 && listMenuPositions[x + 1] < 1) {
-      const menuOptions = document.getElementsByClassName('menu-option')
-      menuOptions[activeMenu].classList.remove('active-option')
-      menuOptions[x + 1].classList.add('active-option')
-      activeMenu = x + 1
-      break;
-    }
-    if (x === listMenuPositions.length - 1 || (listMenuPositions[x] <= 0 && listMenuPositions[x + 1] > 0)) {
-      if (activeMenu === x) {
-        break;
-      }
-      const menuOptions = document.getElementsByClassName('menu-option')
-      menuOptions[activeMenu].classList.remove('active-option')
-      menuOptions[x].classList.add('active-option')
-      activeMenu = x
-      break;
-    }
-  }
-
+  const listMenuPositions = [home, about, exp, projects, hobbies, contact].map((x) =>  Math.abs(x))
+  const smallestNumber = Math.min.apply(null,listMenuPositions)
+  const menuOptions = window.screen.width <= 601 ? document.getElementsByClassName('vertical-menu-option') : document.getElementsByClassName('menu-option')
+   if(smallestNumber < 300){
+    const newActiveMenu = listMenuPositions.indexOf(smallestNumber)
+    menuOptions[activeMenu].classList.remove('active-option')
+    menuOptions[newActiveMenu].classList.add('active-option')
+    activeMenu = newActiveMenu
+   }
 }
 
-const scrollToElement = (id) => {
+const scrollToElement = (id, isMobileOption) => {
+  if(isMobileOption){
+    const nav = getEl('vertical-navbar')
+    nav.style.display = 'none'
+  }
+  if(id === 'home-page'){
+    scrollToTop()
+    return
+  }
   const choosenEl = getEl(id)
   choosenEl.scrollIntoView({ behavior: "smooth" });
 }
@@ -534,7 +528,13 @@ const scrollToTop = () => {
 }
 
 const openVerticalMenu = () => {
-  console.log('1')
+  const navbar = document.getElementById('vertical-navbar')
+  if(navbar.style.display === 'none' || !navbar.style.display){
+    navbar.style.display = 'block'
+  } else{
+    navbar.style.display = 'none'
+  }
+
 }
 
 const addFooterTekst = () => {
