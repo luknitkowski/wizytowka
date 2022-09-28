@@ -283,26 +283,30 @@ function Viewport(data) {
   this.currentSide = 0;
   this.calculatedSide = 0;
 
-
-  bindEvent(document, 'mousedown', function () {
+  const wrapper = getEl('wrapper')
+  bindEvent(wrapper, 'mousedown', function () {
     self.down = true;
   });
 
-  bindEvent(document, 'mouseup', function () {
+  bindEvent(wrapper, 'mouseout', function () {
     self.down = false;
   });
 
-  bindEvent(document, 'keyup', function () {
+  bindEvent(wrapper, 'mouseup', function () {
     self.down = false;
   });
 
-  bindEvent(document, 'mousemove', function (e) {
+  bindEvent(wrapper, 'keyup', function () {
+    self.down = false;
+  });
+
+  bindEvent(wrapper, 'mousemove', function (e) {
     self.mouseX = e.pageX;
     self.mouseY = e.pageY;
   });
 
-  bindEvent(document, 'touchstart', function (e) {
-
+  bindEvent(wrapper, 'touchstart', function (e) {
+    console.log('5')
     self.down = true;
     e.touches ? e = e.touches[0] : null;
     self.mouseX = e.pageX / self.touchSensivity;
@@ -311,22 +315,15 @@ function Viewport(data) {
     self.lastY = self.mouseY;
   });
 
-  bindEvent(document, 'touchmove', function (e) {
-
-
-
-
+  bindEvent(wrapper, 'touchmove', function (e) {
     if (e.touches.length == 1) {
-
       e.touches ? e = e.touches[0] : null;
-
       self.mouseX = e.pageX / self.touchSensivity;
       self.mouseY = e.pageY / self.touchSensivity;
-
     }
   });
 
-  bindEvent(document, 'touchend', function (e) {
+  bindEvent(wrapper, 'touchend', function (e) {
     self.down = false;
   });
 
